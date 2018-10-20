@@ -1,3 +1,6 @@
 <div *ngFor="let launch of upcomingLaunch">   
-    <app-launch-card [launch]="launch"><p>{{ launch.flight_id }}</p></app-launch-card>
+    <app-launch-card [launch]="launch">
+        <p>{{ launch.flight_id }}</p>
+        <p>{{ launch.rocket_id }}</p>
+    </app-launch-card>
 </div>

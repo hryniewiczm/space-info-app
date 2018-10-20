@@ -8,7 +8,7 @@ import { LaunchService } from '../launch.service';
 })
 export class LaunchesComponent implements OnInit {
   latestLaunch = {}
-  upcomingLaunch = {}
+  upcomingLaunch = []
 
   getLatestLaunch() {
     this.launchService.getLatestLaunch().subscribe( res => {
