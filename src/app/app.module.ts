@@ -6,15 +6,20 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LaunchesComponent } from './launches/launches.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { LaunchCardComponent } from './launch-card/launch-card.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LaunchesComponent
+    LaunchesComponent,
+    LaunchCardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

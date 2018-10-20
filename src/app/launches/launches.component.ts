@@ -9,9 +9,11 @@ import { LaunchService } from '../launch.service';
 export class LaunchesComponent implements OnInit {
   latestLaunch = {}
 
-  getLatestLaunch() { 
-	  this.latestLaunch = this.launchService.getLatestLaunch()
-}
+  getLatestLaunch() {
+    this.launchService.getLatestLaunch().subscribe( res => {
+      this.latestLaunch = res
+    })
+  }
 
   constructor(private launchService: LaunchService) { }
 
