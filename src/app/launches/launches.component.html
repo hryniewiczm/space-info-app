@@ -1,3 +1,12 @@
-<p>
-  <app-launch-card [launch]="latestLaunch"></app-launch-card>
-</p>
+<!-- <div *ngFor="let launch of upcomingLaunches">
+    <p>{{ launch.flight_number }}</p>
+    <app-launch-card [launch]="launch">
+
+        <p>{{ launch.flight_number }}</p>
+        <p>{{ launch.upcoming }}</p>
+        <p>{{ launch.launch_date_local }}</p>
+    </app-launch-card>
+</div>
+ -->
+
+ {{ upcomingLaunch | json}}

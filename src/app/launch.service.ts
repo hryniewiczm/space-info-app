@@ -19,5 +19,13 @@ export class LaunchService {
     }
   }
 
+  getUpcomingLaunch(): Observable<any> {
+    try {
+      return this.http.get(`${baseUrl}/upcoming`);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   constructor(private http: HttpClient) { }
 }

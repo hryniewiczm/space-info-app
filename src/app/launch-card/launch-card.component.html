@@ -1,4 +1,7 @@
-<p>
+<div *ngIf="launch">
   <img src="{{launch.links.mission_patch}}" style="width:100px;">
-  {{ launch.mission_name }}
-</p>
+
+  <p>{{ launch.mission_name }}</p>
+  <p>{{ launch.launch_year }}</p>
+  <p>{{ launch.launch_date_local }}</p>
+</div>

@@ -8,6 +8,7 @@ import { LaunchService } from '../launch.service';
 })
 export class LaunchesComponent implements OnInit {
   latestLaunch = {}
+  upcomingLaunch = {}
 
   getLatestLaunch() {
     this.launchService.getLatestLaunch().subscribe( res => {
@@ -15,10 +16,17 @@ export class LaunchesComponent implements OnInit {
     })
   }
 
+  getUpcomingLaunch() {
+    this.launchService.getUpcomingLaunch().subscribe( res => {
+      this.upcomingLaunch = res
+    })
+  }
+
   constructor(private launchService: LaunchService) { }
 
   ngOnInit() {
-    this.getLatestLaunch()
+    this.getLatestLaunch(),
+    this.getUpcomingLaunch()
   }
 
 }
