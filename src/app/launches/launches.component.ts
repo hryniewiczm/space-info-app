@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LaunchService } from '../launch.service';
 
 @Component({
   selector: 'app-launches',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./launches.component.css']
 })
 export class LaunchesComponent implements OnInit {
+  latestLaunch = {}
 
-  constructor() { }
+  getLatestLaunch() { 
+	  this.latestLaunch = this.launchService.getLatestLaunch()
+}
+
+  constructor(private launchService: LaunchService) { }
 
   ngOnInit() {
+    this.getLatestLaunch()
   }
 
 }
